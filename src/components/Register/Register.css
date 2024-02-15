@@ -1,0 +1,85 @@
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    background: #2374AB;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    background-color: #D6FFF6;
+    border: none;
+    text-align: center;
+    padding: .2rem;
+    color: #231651;
+    font-weight: bolder;
+  }
+  
+  .container-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signup-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .register-btn {
+    background-color: #FF8484;
+    color: #231651;
+    font-weight: bolder;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: solid rgb(39, 39, 39) 1px;
+    margin-top: 1rem;
+  }
+  
+  .register-btn:hover {
+    background-color: #e5a0a0;
+    border: solid white 1px;
+    color: black;
+    animation-name: bounce;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: 3s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    cursor: pointer;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    25%,
+    75% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @media (max-width:950px) {
+    .container-general {
+      margin-top: 4rem;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .container-general {
+      margin-top: 9rem;
+    }
+  }

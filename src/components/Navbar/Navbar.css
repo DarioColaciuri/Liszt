@@ -1,0 +1,35 @@
+.navbar-container {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem 1rem 4rem;
+    background-color: #2374AB;
+}
+
+.login {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-btn {
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    transition: ease-in-out 0.3s;
+    padding: .5rem;
+    border-radius: 2rem;
+    color: #D6FFF6;
+
+    &:hover {
+        background-color: #FF8484;
+        color: #231651;
+        font-weight: bolder;
+    }
+}
+
+h1 {
+    color: #FF8484;
+    font-weight: bolder;
+}

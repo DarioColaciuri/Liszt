@@ -1,0 +1,37 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.dashboard-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #2374AB;
+    color: #FF8484;
+    height: 100vh;
+}
+
+.user { 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-img { 
+    width: 4rem;
+}
+
+.config-btn {
+    background-color: transparent;
+    border: none;
+}
+
+i:hover {
+    color: #FF8484;
+}

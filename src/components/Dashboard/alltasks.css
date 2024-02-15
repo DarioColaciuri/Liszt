@@ -1,0 +1,14 @@
+.all-tasks-container {
+    display: flex;
+    flex-direction: column;
+}
+.all-tasks-title {
+    text-align: center;
+}
+
+.task-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+

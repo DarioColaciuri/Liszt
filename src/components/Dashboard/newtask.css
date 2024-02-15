@@ -1,0 +1,38 @@
+.new-task-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #2374AB;
+    padding: 2rem;
+    border-radius: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.addTask-btn {
+    margin-top: 1rem;
+    background-color: transparent;
+    border-radius: 2rem;
+    border: solid;
+    border-width: .1rem;
+    border-color: #ff8484;
+    transition: all ease-in-out 0.3s;
+}
+
+.addTask-btn:hover {
+    background-color: #ff8484;
+    color: black;
+}
+
+.description {
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    text-align: center;
+    height: 4rem;
+    resize: none;
+}
