@@ -1,12 +1,22 @@
 .content {
     display: flex;
     align-items: center;
+}
+
+.components {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 10rem;
+    width: 100vw;
 }
 
 .dashboard-panel {
     display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
@@ -16,6 +26,7 @@
     color: #FF8484;
     height: 100vh;
 }
+
 
 .user { 
     display: flex;

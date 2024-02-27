@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  line-height: 1.5;
 }
 
 body {
@@ -21,7 +22,6 @@ a {
 }
 
 :root {
-  line-height: 1.5;
   color-scheme: light dark;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

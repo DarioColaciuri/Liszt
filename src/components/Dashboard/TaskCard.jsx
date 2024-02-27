@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { deleteDoc, updateDoc, collection, query, where, getDocs, doc } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 import { toast } from 'react-toastify';
@@ -9,8 +9,35 @@ const TaskCard = ({ task, onDelete, onUpdate }) => {
   const [taskData, setTaskData] = useState(task || {});
   const [shareInput, setShareInput] = useState('');
   const [isSharing, setIsSharing] = useState(false);
-
   const { taskId, title, description, date, expireDate, isCompleted, isImportant, isShared, owner, sharedWith } = taskData;
+
+  const [countdown, setCountdown] = useState('');
+
+  useEffect(() => {
+    const calculateCountdown = () => {
+      const now = new Date();
+      const expireDate = new Date(taskData.expireDate);
+      const timeDifference = expireDate - now;
+
+      if (timeDifference > 0) {
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        setCountdown(`Expires in ${days} days ${hours}:${minutes}:${seconds}`);
+      } else {
+        setCountdown('Expired');
+      }
+    };
+    calculateCountdown();
+
+    const countdownInterval = setInterval(() => {
+      calculateCountdown();
+    }, 1000);
+
+    return () => clearInterval(countdownInterval);
+  }, [taskData.expireDate]);
 
   const handleDeleteTask = async () => {
     try {
@@ -160,12 +187,15 @@ const TaskCard = ({ task, onDelete, onUpdate }) => {
       <h3>{title}</h3>
       <p>{description}</p>
       <div className="date">
-        <p>Date: {date}</p>
-        <p>Expire Date: {expireDate}</p>
+        <p>{date}</p>
+        {/* <p>Expire Date: {expireDate}</p> */}
       </div>
+      <div className='countdown'>{countdown}</div>
+
       {/* <p>Completed: {isCompleted ? 'Yes' : 'No'}</p>
       <p>Important: {isImportant ? 'Yes' : 'No'}</p>
       <p>Shared: {isShared ? 'Yes' : 'No'}</p> */}
+
       <p>Owner: {owner}</p>
 
       {isShared && sharedWith !== '' && (

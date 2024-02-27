@@ -45,7 +45,7 @@ const Important = ({ user }) => {
 
   return (
     <div className="all-tasks-container">
-      <h2 className='all-tasks-title'>All Tasks</h2>
+      <h2 className='all-tasks-title'>Important</h2>
       <div className="task-card-container">
       {tasks
           .filter(task => task.isImportant === true)

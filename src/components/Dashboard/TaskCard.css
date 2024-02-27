@@ -3,6 +3,7 @@
     flex-direction: column;
     text-align: center;
     background-color: #2374AB;
+    color: azure;
     padding: 2rem;
     border-radius: 2rem;
 }
@@ -30,6 +31,7 @@
 }
 
 .x-button {
+    color: azure;
     background-color: transparent;
     padding: .1rem;
     border: none;
@@ -50,6 +52,7 @@
 }
 
 .buttons {
+    color: azure;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -72,6 +75,7 @@
 }
 
 .shareTo-btn {
+    color: azure;
     background-color: transparent;
     border-radius: 2rem;
     border: solid;
@@ -87,7 +91,8 @@
 
 .shareTo {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: .5rem;
 }
 
 .shareTo-input {
@@ -107,4 +112,16 @@
 .shareTo-btn-share:hover {
     background-color: #ff8484;
     color: black;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #ff8484;
+    color: black;
+    margin-top: -3rem;
+    padding: .5rem;
+    border-radius: 1rem;
 }
