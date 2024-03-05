@@ -4,7 +4,7 @@
     text-align: center;
     background-color: #2374AB;
     color: azure;
-    padding: 2rem;
+    padding-bottom: 2rem;
     border-radius: 2rem;
 }
 
@@ -13,6 +13,12 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+.owner {
+    padding: .5rem;
+    background-color: #ff84848c;
+    border-radius: 1rem;
 }
 
 .each-shared {
@@ -30,6 +36,11 @@
     background-color: #ff8484ce;
 }
 
+.description-card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .x-button {
     color: azure;
     background-color: transparent;
@@ -43,12 +54,13 @@
     border-radius: 100%;
 }
 
-.date {
+.title-date {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .buttons {
@@ -64,6 +76,10 @@
     border: none;
     cursor: pointer;
     padding: .5rem;
+}
+
+.action-btn:hover {
+    color: #ff8484;
 }
 
 .important {
@@ -82,6 +98,7 @@
     border-width: .1rem;
     border-color: #ff8484;
     transition: all ease-in-out 0.3s;
+    margin: 1rem;
 }
 
 .shareTo-btn:hover {
@@ -93,6 +110,7 @@
     display: flex;
     justify-content: center;
     gap: .5rem;
+    margin-top: 1rem;
 }
 
 .shareTo-input {
@@ -118,10 +136,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     background-color: #ff8484;
-    color: black;
-    margin-top: -3rem;
+    color: azure;
+    font-weight: bolder;
     padding: .5rem;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0rem 0rem ;
 }

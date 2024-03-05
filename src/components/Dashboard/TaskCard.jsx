@@ -184,19 +184,17 @@ const TaskCard = ({ task, onDelete, onUpdate }) => {
 
   return (
     <div className={`task-card ${isImportant ? 'important' : ''} ${isCompleted ? 'completed' : ''}`}>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <div className="date">
-        <p>{date}</p>
+      <div className='countdown'>{countdown}</div>
+      <div className="title-date">
+        <p className='date'>{date}</p>
+        <h3 className='title'>{title}</h3>
+        <p className='owner'>{owner}</p>
         {/* <p>Expire Date: {expireDate}</p> */}
       </div>
-      <div className='countdown'>{countdown}</div>
-
+      <p className='description-card'>{description}</p>
       {/* <p>Completed: {isCompleted ? 'Yes' : 'No'}</p>
       <p>Important: {isImportant ? 'Yes' : 'No'}</p>
       <p>Shared: {isShared ? 'Yes' : 'No'}</p> */}
-
-      <p>Owner: {owner}</p>
 
       {isShared && sharedWith !== '' && (
         <div className='shared-with'>
@@ -208,9 +206,9 @@ const TaskCard = ({ task, onDelete, onUpdate }) => {
         </div>
       )}
       <div className="buttons">
-        <button className='action-btn' onClick={handleToggleCompleted}><i className="fa fa-check"></i></button>
-        <button className='action-btn' onClick={handleToggleImportant}><i className="fa fa-exclamation"></i></button>
-        <button className='action-btn' onClick={handleDeleteTask}><i className="fa fa-trash" /></button>
+        <button title='Mark as completed' className='action-btn' onClick={handleToggleCompleted}><i className="fa fa-check"></i></button>
+        <button title='Mark as important' className='action-btn' onClick={handleToggleImportant}><i className="fa fa-exclamation"></i></button>
+        <button title='Delete task' className='action-btn' onClick={handleDeleteTask}><i className="fa fa-trash" /></button>
       </div>
 
       {isSharing ? (
@@ -227,7 +225,8 @@ const TaskCard = ({ task, onDelete, onUpdate }) => {
       ) : (
         <button className="shareTo-btn" onClick={handleShareToggle}>Share To</button>
       )}
-    </div>
+      </div>
+
   );
 }
 
