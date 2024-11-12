@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAAkoTnAY0DMF35LdgK9SDY9YX9CO0ZmtY",
-  authDomain: "liszt-b1746.firebaseapp.com",
-  projectId: "liszt-b1746",
-  storageBucket: "liszt-b1746.appspot.com",
-  messagingSenderId: "1032384141966",
-  appId: "1:1032384141966:web:fbf0fcbc1291ae40c607df"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
